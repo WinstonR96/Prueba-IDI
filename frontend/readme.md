@@ -1,7 +1,10 @@
-#ExtJs
+# ExtJs
 
-##Controladores
+## Controladores
+[Ir a](https://github.com/WinstonR96/Prueba-IDI/tree/master/frontend/app/controller)
 
-##Grillas
+## Grillas
+[Ir a](https://github.com/WinstonR96/Prueba-IDI/blob/master/frontend/app/view/panel/Grid.js)
 
-##Formularios
+## Formularios
+[Ir a](https://github.com/WinstonR96/Prueba-IDI/tree/master/frontend/app/view/panel)
