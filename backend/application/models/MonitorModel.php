@@ -20,13 +20,15 @@ class MonitorModel extends CI_Model{
     public function eliminar($data){
         foreach($data as $value){
             $this->db->where('id', $value['id']);
-            $this->db->update('monitores', array('estado'=> -1));
+            $query = $this->db->update('monitores', array('estado'=> -1));
+            return $query;
         }
     }
  
     public function actualizar($data){
         $this->db->where('id', $data['id']);
-        $this->db->update('monitores', $data);
+        $query = $this->db->update('monitores', $data);
+        return $query;
     }
 
     public function monitores_combo(){

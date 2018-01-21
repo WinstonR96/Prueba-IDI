@@ -25,13 +25,15 @@ class MonitoriasModel extends CI_Model{
     public function eliminar($data){
         foreach($data as $value){
             $this->db->where('id', $value['id']);
-            $this->db->update('monitorias', array('estado'=> -1));
+            $query = $this->db->update('monitorias', array('estado'=> -1));
+            return $query;
         }
     }
  
     public function actualizar($data){
         $this->db->where('id', $data['id']);
-        $this->db->update('monitorias', $data);
+        $query = $this->db->update('monitorias', $data);
+        return $query;
     }
 
 }
