@@ -11,5 +11,5 @@
 
 **Nota**
 Usar el siguiente comando para clonar el proyecto
-git clone https://github.com/WinstonR96/Prueba-IDI.git prueba_idi
+"**git clone https://github.com/WinstonR96/Prueba-IDI.git prueba_idi**"
 
