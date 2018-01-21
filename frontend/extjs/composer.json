@@ -1,0 +1,12 @@
+{
+    "name": "fundacionidi/extjs",
+    "description": "Repositorio provisional de ExtJS",
+    "authors": [
+        {
+            "name": "Jeison David Berdugo Orejarena",
+            "email": "jberdugo@imasdemasi.org"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

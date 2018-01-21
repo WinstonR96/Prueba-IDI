@@ -1,0 +1,11 @@
+{
+  "name": "ext-theme-aulatouch",
+  "format": "1",
+  "version": "4.2.1",
+  "compatVersion": "4.2.0",
+  "creator": "Richard Sarmiento - Fundacion I+D+I",
+  "summary": "Tema AulaTouch",
+  "detailedDescription": "El tema de aulatouch",
+  "type": "theme",
+  "extend": "ext-theme-neptune"
+}
