@@ -57,7 +57,9 @@ Ext.define('CrudExt.view.panel.Grid', {
 					{
 						text: 'Eliminar monitor',
 						iconCls: 'delete',
-						action: 'deletemonitor'
+						action: 'deletemonitor',
+						name: 'deletemonitor',
+						disabled: true
 					},
 					{
 						xtype: 'button',
@@ -124,7 +126,9 @@ Ext.define('CrudExt.view.panel.Grid', {
 					{
 						text: 'Eliminar monitoria',
 						iconCls: 'delete',
-						action: 'deletemonitoria'
+						action: 'deletemonitoria',
+						name: 'deletemonitoria',
+						disabled: true
 					},
 					{
 						xtype: 'button',

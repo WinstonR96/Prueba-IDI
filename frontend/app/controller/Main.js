@@ -21,15 +21,18 @@ Ext.define('CrudExt.controller.Main', {
 				selectionchange: function(grid, seleccionado){
 					var grilla = grid.view.up().up();
 					console.log(grilla);
-					boton = grilla.down("[name=editmonitoria]");
+					botoneditar = grilla.down("[name=editmonitoria]");
+					botoneliminar = grilla.down("[name=deletemonitoria]");
 					for(var key in seleccionado){
 						RowSelection[key] = seleccionado[key].data;
 					}
 
-					if(seleccionado.length == 1){
-						boton.setDisabled(false);
+					if(seleccionado.length != 0){
+						botoneditar.setDisabled(false);
+						botoneliminar.setDisabled(false);
 					}else{
-						boton.setDisabled(true);
+						botoneditar.setDisabled(true);
+						botoneliminar.setDisabled(true);
 					}
 				}
             },
@@ -51,17 +54,20 @@ Ext.define('CrudExt.controller.Main', {
 					var monitorias = grid.view.up().up().down("[alias=gridMonitorias]");
 					console.log(monitorias.store)
 				
-					botton = grilla.down("[name=editemonitor]");
+					bottoneditar = grilla.down("[name=editemonitor]");
+					bottoneliminar = grilla.down("[name=deletemonitor]");
 					for(var key in seleccionados){
 						SelectionRow[key] = seleccionados[key].data;
 					}
-					if(seleccionados.length == 1){
-						botton.setDisabled(false);
+					if(seleccionados.length != 0){
+						bottoneditar.setDisabled(false);
+						bottoneliminar.setDisabled(false);
 						monitorias.getStore().filterBy(function(rec){
 							return rec.get("monitor_asignado") == seleccionados[0].data.id;
 						});
 					}else{
-						botton.setDisabled(true);
+						bottoneditar.setDisabled(true);
+						bottoneliminar.setDisabled(true);
 						monitorias.getStore().reload()
 					}
 				}
@@ -168,7 +174,7 @@ Ext.define('CrudExt.controller.Main', {
 							Monitor: SelectionRow[0]
 						})
 					}else{
-						Ext.Msg.alert("Error", "No se pueden editar mas de un usuarios al tiempo");
+						Ext.Msg.alert("Error", "No se pueden editar dos items al tiempo");
 						
 					}
 						
